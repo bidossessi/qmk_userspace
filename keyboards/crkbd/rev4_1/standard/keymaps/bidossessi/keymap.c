@@ -6,7 +6,7 @@
 /** FR keyboard specific definitions */
 #define FR_CED RALT(KC_COMMA)
 #define FR_CIR RALT(KC_I)
-#define FR_ACU  RALT(KC_QUOTE)
+#define FR_ACU  RALT(KC_E)
 #define FR_GRV RALT(KC_GRAVE)
 /** QWERTY home row mods */
 #define HMOD_S LALT_T(KC_S)
@@ -44,7 +44,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3_ex2(
   //,--------------------------------------------------------------.  ,--------------------------------------------------------------.
-      QK_GESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  FR_CED,     FR_ACU,    KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,    D_CMD,
+        LTH_3,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  FR_CED,     FR_ACU,    KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,    RTH_3,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
        L_SHRT,    KC_A,  HMOD_S,  HMOD_D,  HMOD_F,    KC_G,  FR_CIR,     FR_GRV,    KC_H,  HMOD_J,  HMOD_K,  HMOD_L, KC_QUOT,  L_SHRT,
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
@@ -93,9 +93,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   
   [_NAV] = LAYOUT_split_3x6_3_ex2(
   //,--------------------------------------------------------------.  ,--------------------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,  D_REDO,  D_PSTE,  D_COPY,   D_CUT,  D_UNDO, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     KC_F12,  D_UNDO,  D_PSTE,  D_COPY,   D_CUT,  D_REDO,   D_CMD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, XXXXXXX,    XXXXXXX,  KC_LEFT, KC_DOWN,  KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
+      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, XXXXXXX,     KC_F12,  KC_LEFT, KC_DOWN,  KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
@@ -105,11 +105,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_MOUSE] = LAYOUT_split_3x6_3_ex2(
   //,--------------------------------------------------------------.  ,--------------------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, _______, _______, _______, _______, _______, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     KC_F12, _______, _______, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-      XXXXXXX, _______, _______, _______, _______, _______, XXXXXXX,    XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, XXXXXXX, 
+      XXXXXXX, _______, _______, _______, _______, _______, XXXXXXX,     KC_F12, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, XXXXXXX, 
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_WH_L, KC_WH_U, KC_WH_D, KC_WH_R, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX, XXXXXXX, XXXXXXX,    KC_BTN2, KC_BTN1, KC_BTN3
                                       //`--------------------------'  `--------------------------'

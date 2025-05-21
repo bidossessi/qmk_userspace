@@ -21,7 +21,7 @@ layer_state_t layer_state_set_user(layer_state_t state)
         rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
         break;
     case _SYMBOLS:
-        rgb_matrix_sethsv_noeeprom(HSV_CYAN);
+        rgb_matrix_sethsv_noeeprom(HSV_BLUE);
         rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
         break;
     case _NUMBERS:
@@ -33,7 +33,7 @@ layer_state_t layer_state_set_user(layer_state_t state)
         rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
         break;
     case _MOUSE:
-        rgb_matrix_sethsv_noeeprom(HSV_BLUE);
+        rgb_matrix_sethsv_noeeprom(HSV_CYAN);
         rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
         break;
     case _NAV:
@@ -42,7 +42,7 @@ layer_state_t layer_state_set_user(layer_state_t state)
         break;
     case _SHORTCUTS:
         rgb_matrix_sethsv_noeeprom(HSV_WHITE);
-        rgb_matrix_mode_noeeprom(RGB_MATRIX_BREATHING);
+        rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
         break;
     case _GAMING_2:
         rgb_matrix_sethsv_noeeprom(HSV_RED);
@@ -51,7 +51,6 @@ layer_state_t layer_state_set_user(layer_state_t state)
         rgb_matrix_mode_noeeprom(RGB_MATRIX_CYCLE_LEFT_RIGHT);
         break;
     default:
-        rgb_matrix_sethsv_noeeprom(HSV_WHITE);
         rgb_matrix_mode_noeeprom(RGB_MATRIX_DIGITAL_RAIN);
         break;
     }
