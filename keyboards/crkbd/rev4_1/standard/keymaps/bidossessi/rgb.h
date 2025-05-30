@@ -51,6 +51,7 @@ layer_state_t layer_state_set_user(layer_state_t state)
         rgb_matrix_mode_noeeprom(RGB_MATRIX_CYCLE_LEFT_RIGHT);
         break;
     default:
+        rgb_matrix_sethsv_noeeprom(HSV_RED);
         rgb_matrix_mode_noeeprom(RGB_MATRIX_DIGITAL_RAIN);
         break;
     }
